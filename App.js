@@ -6,7 +6,10 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Sobre from './src/telas/Sobre';
+import List from './src/telas/ListaProdutos';
 import mock_sobre from './src/mocks/sobre';
+
+
 
 function MenuKit(){
   return <ProdutoItem {...mock}/>
@@ -14,6 +17,10 @@ function MenuKit(){
 
 function MenuSobre(){
   return <Sobre {...mock_sobre}/>
+}
+
+function cards(){
+  return <List {...mock}/>
 }
 
 const Tab = createBottomTabNavigator();
@@ -30,8 +37,8 @@ function TabsMenu(){
                   : 'basket-outline';
                 } else if(route.name === "Sobre nós"){
                   iconName = focused
-                  ? 'paw'
-                  : 'paw-outline';
+                  ? 'accessibility'
+                  : 'accessibility-outline';
                 } else if(route.name === "Produtos"){
                   iconName = focused
                   ? 'list'
@@ -44,14 +51,14 @@ function TabsMenu(){
               
                 return <Ionicons name={iconName} size={size} color={color} />
               },
-              tabBarActiveTintColor: 'purple',
-              tabBarInactiveTintColor: 'gray',
+              tabBarActiveTintColor: 'blue',
+              tabBarInactiveTintColor: 'black',
               tabBarHideOnKeyboard: true,
               headerShown: false,
             })}>
               <Tab.Screen name='Kit' component={MenuKit} />
               <Tab.Screen name='Sobre nós' component={MenuSobre} />
-              <Tab.Screen name='Produtos' component={MenuKit} />
+              <Tab.Screen name='Produtos' component={cards} />
               <Tab.Screen name='Lista de Desejos' component={MenuKit} />
           </Tab.Navigator>
 }
