@@ -9,7 +9,7 @@ const produto ={
     },
     
     detalhes:{
-        nome: "-----------KIT AP PULSATIVO CARBURADO-----------",
+        nome: "-----------KIT AP PULSATIVO CARBURADO---------",
         detalhe: ">Turbina  0.48",
         detalhe1: ">Tubo de pressurização",
         detalhe2: ">Coletor AP pulsativo",
@@ -44,6 +44,11 @@ itens: {
     },
 ]
    } 
+}
+
+export default produto;
+
+
 }
 
 export default produto;
