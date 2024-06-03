@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
 
     },
     conteiner: {
-        backgroundColor: "grey",
+        backgroundColor: "black",
 
     }
 });
